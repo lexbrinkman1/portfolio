@@ -532,7 +532,7 @@ input {
 }
 
 .project__item {
-  grid-template-columns: 5fr 7fr;
+  grid-template-columns: 5fr;
 }
 
 .project__img {
