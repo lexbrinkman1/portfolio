@@ -42,13 +42,18 @@ window.addEventListener('scroll', scrollHeader);
 
 /*=============== Contact Form =============== */
 const contactForm = document.getElementById('contact-form'),
-  contactName = document.getElementById('contact-name'),
-  contactEmail = document.getElementById('contact-email'),
+  contactName = document.getElementById('from_name'),
+  contactEmail = document.getElementById('reply_to'),
+  contactToName = document.getElementById('to_name'),
   Message = document.getElementById('message'),
   contactMessage = document.getElementById('contact-message');
 
+
+  console.log(contactToName);
 const sendEmail = (e) => {
   e.preventDefault();
+  console.log(contactToName);
+
 
   // check if the field has a value
   if (
@@ -66,10 +71,10 @@ const sendEmail = (e) => {
     // serviceID - templateID - #form - publickey
     emailjs
       .sendForm(
-        'service_paca217',
-        'template_tiocjpn',
+        'service_j712gdm',
+        'template_3resg34',
         '#contact-form',
-        'vxDcl4UI2jbOQBn6f'
+        'ON7OjCUXyqcMfxMqU'
       )
       .then(
         () => {

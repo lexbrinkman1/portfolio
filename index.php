@@ -553,23 +553,30 @@
               <p class="contact__form-title">Or just write me a letter here_</p>
 
               <form action="" id="contact-form">
+              <input
+                    type="hidden"
+                    name="to_name"
+                    value="Lex Brinkman"
+                    class="contact__input"
+                    id="to_name"
+                  />
                 <div class="contact__input-div">
                   <input
                     type="text"
-                    name="name"
+                    name="from_name"
                     placeholder="Your name"
                     class="contact__input"
-                    id="contact-name"
+                    id="from_name"
                   />
                 </div>
 
                 <div class="contact__input-div">
                   <input
                     type="email"
-                    name="email"
+                    name="reply_to"
                     placeholder="Your e-mail"
                     class="contact__input"
-                    id="contact-email"
+                    id="reply_to"
                   />
                 </div>
 
@@ -586,7 +593,7 @@
 
                 <p class="contact__message text-sm" id="contact-message"></p>
 
-                <button type="submit" class="button contact__button">
+                <button type="submit" name="newMessage" class="button contact__button">
                   SEND
                 </button>
               </form>
