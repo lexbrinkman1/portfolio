@@ -23,12 +23,8 @@ function userActivity() {
   $password = "sSS48h6e8xdFRjcm";
   $dbname = "lex_brinkman_nl";
   
-  $conn = new mysqli($servername, $username, $password, $dbname);
-  // Check connection
-  if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
-  
+  $conn = new mysqli($servername, $username, $password, $dbname) or die("Connect failed: %s\n". $conn -> error);
+
   $sql = "INSERT INTO user_activity (ip, device, os, browser, country, region_name, city, lat, lon, time_zone) VALUES ('$ip', '$device', '$os', '$browser', '$country', '$region_name', '$city', '$lat', '$lon', '$time_zone')";
       
   if ($conn->query($sql) === TRUE) {
