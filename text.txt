@@ -1,6 +1,6 @@
 ========== HOME ==========
 .home__name
-John Anderson_
+Lex Brinkman
 
 .home__work
 frontend developer, QA-engineer

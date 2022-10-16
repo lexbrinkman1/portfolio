@@ -41,18 +41,18 @@ function scrollHeader() {
 window.addEventListener('scroll', scrollHeader);
 
 /*=============== Contact Form =============== */
-const contactForm = document.getElementById('contact-form'),
-  contactName = document.getElementById('from_name'),
-  contactEmail = document.getElementById('reply_to'),
-  contactToName = document.getElementById('to_name'),
-  Message = document.getElementById('message'),
-  contactMessage = document.getElementById('contact-message');
+const contactForm = document.getElementById('contact-form');
+const contactName = document.getElementById('from_name');
+const contactEmail = document.getElementById('reply_to');
+const contactToName = document.getElementById('to_name');
+const Message = document.getElementById('message');
+const contactMessage = document.getElementById('contact-message');
 
 
-  console.log(contactToName);
+
 const sendEmail = (e) => {
   e.preventDefault();
-  console.log(contactToName);
+
 
 
   // check if the field has a value

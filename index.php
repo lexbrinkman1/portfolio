@@ -1,3 +1,11 @@
+<?php
+
+require_once('functions.php');
+
+userActivity();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -37,6 +45,11 @@
     />
 
     <title>Portfolio Website</title>
+    <style>
+      .project__item {
+        grid-template-columns: 5fr;
+      }
+    </style>
   </head>
   <body>
     <!--=============== Header ===============-->
@@ -635,6 +648,6 @@
     <script src="assets/js/main.js"></script>
 
     <!--=============== Common ===============-->
-    <script src="assets/js/common.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
