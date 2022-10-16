@@ -12,6 +12,7 @@ userActivity();
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link name="lexbrinkman-favicon" rel="icon" type="image/x-icon" href="/assets/img/laptop.png">
     <!--=============== Remixicons ===============-->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
@@ -44,7 +45,7 @@ userActivity();
       disabled
     />
 
-    <title>Portfolio Website</title>
+    <title>Lex Brinkman Portfolio</title>
     <style>
       .project__item {
         grid-template-columns: 5fr;
@@ -130,6 +131,13 @@ userActivity();
                 class="home__social-link"
               >
                 <i class="ri-facebook-box-fill"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/lex.brinkman/"
+                target="_blank"
+                class="home__social-link"
+              >
+                <i class="ri-instagram-fill"></i>
               </a>
             </div>
           </div>
@@ -247,6 +255,16 @@ userActivity();
                 MBO Niveau 4 Software Developer
               </p>
             </div>
+            
+            <div class="resume__item">
+              <h3 class="resume__subtitle text-sm">
+                ROC TOP
+              </h3>
+              <p class="resume__date text-sm">August 2018 - July 2020</p>
+              <p class="resume__description text-lg">
+                MBO Niveau 4 Teaching Assistent
+              </p>
+            </div>
 
             <div class="resume__item">
               <h3 class="resume__subtitle text-sm">
@@ -264,6 +282,14 @@ userActivity();
             <h3 class="resume__title text-sm">EMPLOYMENT</h3>
 
             <div class="resume__item">
+              <h3 class="resume__subtitle text-sm">HERGO </h3>
+              <p class="resume__date text-sm">Januari 2020 - Present</p>
+              <p class="resume__description text-lg">
+                Sales employee of meat products
+              </p>
+            </div>
+
+            <div class="resume__item">
               <h3 class="resume__subtitle text-sm">FLIRT CREATIVITY</h3>
               <p class="resume__date text-sm">August 2021 - Januari 2022</p>
               <p class="resume__description text-lg">
@@ -272,10 +298,18 @@ userActivity();
             </div>
 
             <div class="resume__item">
-              <h3 class="resume__subtitle text-sm">HERGO </h3>
-              <p class="resume__date text-sm">Januari 2020 - Present</p>
+              <h3 class="resume__subtitle text-sm">EXTER </h3>
+              <p class="resume__date text-sm">April 2019 - December 2019</p>
               <p class="resume__description text-lg">
-                Sales employee of meat products
+                Production worker, managing spice ovens, grinding & packaging spices
+              </p>
+            </div>
+
+            <div class="resume__item">
+              <h3 class="resume__subtitle text-sm">LIDL </h3>
+              <p class="resume__date text-sm">Juli 2018 - June 2019</p>
+              <p class="resume__description text-lg">
+                Cashier, stock clerk & warehouse worker
               </p>
             </div>
           </div>

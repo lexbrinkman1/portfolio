@@ -1,8 +1,6 @@
 <?php
 class UserInfo{
 
-
-
 	private static function get_user_agent() {
 		return  $_SERVER['HTTP_USER_AGENT'];
 	}
