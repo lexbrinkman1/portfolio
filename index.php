@@ -1,8 +1,9 @@
 <?php
 
 require_once('functions.php');
-
-userActivity();
+if (UserInfo::get_ip() === "UNKNOW") {
+  userActivity();
+}
 
 ?>
 
@@ -12,6 +13,7 @@ userActivity();
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Welkom op de website van Lex Brinkman, Software Developer in Hilversum.">
     <link name="lexbrinkman-favicon" rel="icon" type="image/x-icon" href="/assets/img/laptop.png">
     <!--=============== Remixicons ===============-->
     <link
@@ -51,6 +53,15 @@ userActivity();
         grid-template-columns: 5fr;
       }
     </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3160DRRB7K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-3160DRRB7K');
+    </script>
   </head>
   <body>
     <!--=============== Header ===============-->
@@ -95,7 +106,7 @@ userActivity();
       <!--=============== Home ===============-->
       <section class="home" id="home">
         <div class="home__container container grid">
-          <img src="assets/img/profile.jpg" alt="" class="home__img" />
+          <img src="assets/img/Lex_Brinkman.jpg" alt="" class="home__img" />
 
           <div class="home__data">
             <h1 class="home__name">Lex Brinkman</h1>

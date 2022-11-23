@@ -71,12 +71,12 @@ const sendEmail = (e) => {
     // serviceID - templateID - #form - publickey
     emailjs
       .sendForm(
-        'service_j712gdm',
-        'template_3resg34',
-        '#contact-form',
-        'ON7OjCUXyqcMfxMqU'
-      )
-      .then(
+          'service_j712gdm',
+          'template_3resg34',
+          '#contact-form',
+          'ON7OjCUXyqcMfxMqU'
+        )
+        .then(
         () => {
           // show message and add color, window + dot to open emoji
           contactMessage.classList.add('color-light');
