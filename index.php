@@ -1,9 +1,9 @@
 <?php
 
 require_once('functions.php');
-if (UserInfo::get_ip() === "UNKNOW") {
+// if (UserInfo::get_ip() === "UNKNOW") {
   userActivity();
-}
+// }
 
 ?>
 
@@ -123,28 +123,28 @@ if (UserInfo::get_ip() === "UNKNOW") {
             </dl>
             <div class="home__socials">
               <a
-                href="https://github.com/LexB901"
+                href="https://github.com/lexbrinkman"
                 target="_blank"
                 class="home__social-link"
               >
                 <i class="ri-github-fill"></i>
               </a>
               <a
-                href="https://www.linkedin.com/in/lex-brinkman-65869221b/"
+                href="https://www.linkedin.com/in/lexbrinkman/"
                 target="_blank"
                 class="home__social-link"
               >
                 <i class="ri-linkedin-box-fill"></i>
               </a>
               <a
-                href="https://www.facebook.com/lex.brinkman.3"
+                href="https://www.facebook.com/lexbrinkman1"
                 target="_blank"
                 class="home__social-link"
               >
                 <i class="ri-facebook-box-fill"></i>
               </a>
               <a
-                href="https://www.instagram.com/lex.brinkman/"
+                href="https://www.instagram.com/lexbrinkman/"
                 target="_blank"
                 class="home__social-link"
               >
@@ -449,7 +449,7 @@ if (UserInfo::get_ip() === "UNKNOW") {
                 <li>css3</li>
                 <li>JavaScript</li>
                 <li>Bootstrap</li>
-                <a target="_blank" href="https://github.com/LexB901/portfolio" class="project__link text-sm">Check out code</a>
+                <a target="_blank" href="https://github.com/lexbrinkman/portfolio" class="project__link text-sm">Check out code</a>
               </ul>
 
             </div>
@@ -470,7 +470,7 @@ if (UserInfo::get_ip() === "UNKNOW") {
                 <li>JavaScript</li>
                 <li>PHP</li>
                 <li>Bootstrap</li>
-                <a target="_blank" href="https://github.com/LexB901/vakantie_woningen" class="project__link text-sm">Check out code</a>
+                <a target="_blank" href="https://github.com/lexbrinkman/vakantie_woningen" class="project__link text-sm">Check out code</a>
               </ul>
 
             </div>
@@ -492,7 +492,7 @@ if (UserInfo::get_ip() === "UNKNOW") {
                 <li>JavaScript</li>
                 <li>PHP</li>
                 <li>Bootstrap</li>
-                <a target="_blank" href="https://github.com/LexB901/e_learning" class="project__link text-sm">Check out code</a>
+                <a target="_blank" href="https://github.com/lexbrinkman/e_learning" class="project__link text-sm">Check out code</a>
               </ul>
 
             </div>
@@ -513,7 +513,7 @@ if (UserInfo::get_ip() === "UNKNOW") {
                 <li>css3</li>
                 <li>JavaScript</li>
                 <li>PHP</li>
-                <a target="_blank" href="https://github.com/LexB901/know_it_all" class="project__link text-sm">Check out code</a>
+                <a target="_blank" href="https://github.com/lexbrinkman/know_it_all" class="project__link text-sm">Check out code</a>
               </ul>
 
             </div>
@@ -532,7 +532,7 @@ if (UserInfo::get_ip() === "UNKNOW") {
                 <li>html5</li>
                 <li>css3</li>
                 <li>JavaScript</li>
-                <a target="_blank" href="https://github.com/LexB901/ergowijzer" class="project__link text-sm">Check out code</a>
+                <a target="_blank" href="https://github.com/lexbrinkman/ergowijzer" class="project__link text-sm">Check out code</a>
               </ul>
 
               
@@ -553,7 +553,7 @@ if (UserInfo::get_ip() === "UNKNOW") {
                 <li>css3</li>
                 <li>JavaScript</li>
                 <li>PHP</li>
-                <a target="_blank" href="https://github.com/LexB901/de_blije_dobbelsteen" class="project__link text-sm">Check out code</a>
+                <a target="_blank" href="https://github.com/lexbrinkman/de_blije_dobbelsteen" class="project__link text-sm">Check out code</a>
               </ul>
 
              
@@ -581,25 +581,25 @@ if (UserInfo::get_ip() === "UNKNOW") {
               <ul class="contact__socials">
                 <li>
                   <a
-                    href="https://www.facebook.com/lex.brinkman.3" target="_blank"
+                    href="https://www.facebook.com/lexbrinkman1" target="_blank"
                     class="contact__social-link"
                     >Facebook</a
                   >
                 </li>
                 <li>
                   <a
-                    href="https://www.linkedin.com/in/lex-brinkman-65869221b/" target="_blank"
+                    href="https://www.linkedin.com/in/lexbrinkman/" target="_blank"
                     class="contact__social-link"
                     >Linkedin</a
                   >
                 </li>
                 <li>
-                  <a href="https://github.com/LexB901" class="contact__social-link" target="_blank"
+                  <a href="https://github.com/lexbrinkman" class="contact__social-link" target="_blank"
                     >Github</a
                   >
                 </li>
                 <li>
-                  <a href="https://www.instagram.com/lex.brinkman/" class="contact__social-link" target="_blank"
+                  <a href="https://www.instagram.com/lexbrinkman/" class="contact__social-link" target="_blank"
                     >Instagram</a
                   >
                 </li>
