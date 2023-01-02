@@ -91,6 +91,9 @@ input {
 }
 
 /*=============== Reusable Css ===============*/
+
+
+
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -227,7 +230,7 @@ input {
 
 /*=============== Home ===============*/
 .home {
-  background: url(../img/profile.jpg);
+  background: url(../img/Lex_Brinkman.jpg);
   background-size: cover;
   background-position: 50%;
   padding-top: 5.5rem;

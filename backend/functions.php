@@ -1,5 +1,6 @@
 <?php 
 require('UserInfo.php');
+require_once "../config.php";
 
 function userActivity() {
   $ip = UserInfo::get_ip();
@@ -18,12 +19,9 @@ function userActivity() {
   $lon = str_replace(array('"lon":', '"'), "",$lon);
   $time_zone = str_replace(array('"timezone":', '"'), "",$time_zone);
   
-  $servername = "141.148.247.212";
-  $username = "lex_brinkman_nl";
-  $password = "sSS48h6e8xdFRjcm";
-  $dbname = "lex_brinkman_nl";
-  
-  $conn = new mysqli($servername, $username, $password, $dbname) or die("Connect failed: %s\n". $conn -> error);
+  if ($conn->connect_error) {
+    error("Connection failed: " . $conn->connect_error);
+  }
 
   $sql = "INSERT INTO user_activity (ip, device, os, browser, country, region_name, city, lat, lon, time_zone) VALUES ('$ip', '$device', '$os', '$browser', '$country', '$region_name', '$city', '$lat', '$lon', '$time_zone')";
       

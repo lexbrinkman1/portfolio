@@ -1,3 +1,4 @@
+
 /*=============== Show Menu =============== */
 const navMenu = document.getElementById('nav-menu'),
   navToggle = document.getElementById('nav-toggle'),
@@ -51,6 +52,7 @@ const contactMessage = document.getElementById('contact-message');
 
 
 const sendEmail = (e) => {
+
   e.preventDefault();
 
 
@@ -68,6 +70,7 @@ const sendEmail = (e) => {
     // show message
     contactMessage.textContent = 'Write all the input fields';
   } else {
+
     // serviceID - templateID - #form - publickey
     emailjs
       .sendForm(
