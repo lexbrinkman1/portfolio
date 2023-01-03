@@ -31,7 +31,6 @@ if ($conn->query($sql) === TRUE) {
         "success" => true,
         "message" => "Rit succesvol toegevoegd!",
         "address" => $destination,
-        "addressName" => $destinationName,
     ]);
 } else {
     error("something went wrong");

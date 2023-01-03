@@ -1,6 +1,6 @@
 <?php 
 require('UserInfo.php');
-require_once "../config.php";
+require_once('./config.php');
 
 function userActivity() {
   $ip = UserInfo::get_ip();

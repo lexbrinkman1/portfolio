@@ -31,18 +31,9 @@ if(!isset($_POST["address"]))
     error("Adres is niet geldig");
 }
 
-if(!isset($_POST["addressName"]))
-{
-    error("Adres naam is niet geldig");
-} elseif (strlen($_POST["addressName"]) > 255) {
-    error("Adres naam is niet geldig");
-}
-
-
 $address = $_POST["address"];
-$addressName = $_POST["addressName"];
 
-$sql = "INSERT INTO address VALUES (DEFAULT, '$addressName', '$address')";
+$sql = "INSERT INTO address VALUES (DEFAULT, '$address')";
 
 if ($conn->query($sql) === TRUE) {
     print json_encode([

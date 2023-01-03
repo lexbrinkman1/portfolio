@@ -138,18 +138,6 @@
             <p>Afstand in km:</p> 
             <input class="input-width-100 form-control pac-target-input" id="distance" type="number">
           </li>
-       
-          <li
-            class="
-              list-group-item
-              d-flex
-              justify-content-between
-              align-items-center
-            "
-          >
-            <p>Bestemming naam:</p> 
-            <input class="input-width-250 form-control pac-target-input" id="destinationName" type="text" />
-          </li>
           <li
             class=" 
               inputNumber
@@ -223,11 +211,10 @@ $(".inputNumber input[type='number']").keyup(function() {
   $("#newTotal").html(`${newTotal}`);
 });
 
-function checkIfAddressExists(address, addressName) {
+function checkIfAddressExists(address) {
   const form_data = new FormData();
 
   form_data.append('address', address);
-  form_data.append('addressName', addressName);
 
   fetch ("../backend/check_address.php", {
     method: 'POST',
@@ -240,18 +227,18 @@ function checkIfAddressExists(address, addressName) {
   .then((response) => {
       let data = JSON.parse(response);
       if (data.success && data.exists === false) {
-          createNewAddress(data.address, data.addressName);
+          createNewAddress(data.address);
+
       } else {
-        console.error(data.error);
+        console.log(data.message);
       }
   })
 }
 
-function createNewAddress(address, addressName) {
+function createNewAddress(address) {
   const form_data = new FormData();
 
   form_data.append('address', address);
-  form_data.append('addressName', addressName);
 
   fetch ("../backend/create_new_address.php", {
     method: 'POST',
@@ -278,7 +265,6 @@ function createNewRide() {
   form_data.append('travelDuration', $("#duration").val());
   form_data.append('origin', $("#originResult").text());
   form_data.append('destination', $("#destinationResult").text());
-  form_data.append('destinationName', $("#destinationName").val());
   form_data.append('oldTotal', $("#oldTotal").val());
   form_data.append('newTotal', $("#newTotal").text());
   form_data.append('travelType', $("#travelType").val());
@@ -300,8 +286,8 @@ function createNewRide() {
             let data = JSON.parse(response);
 
             if (data.success) {
-              console.log(data.address, data.addressName);
-              checkIfAddressExists(data.address, data.addressName);
+              checkIfAddressExists(data.originAddress);
+              checkIfAddressExists(data.destinationAddress);
             } else {
               console.error(data.error);
             }

@@ -31,18 +31,9 @@ if(!isset($_POST["address"]))
     error($_POST["address"]);
 }
 
-if(!isset($_POST["addressName"]))
-{
-    error($_POST["address"]);
-} elseif (strlen($_POST["addressName"]) > 255) {
-    error($_POST["addressName"]);
-}
-
-
 $address = $_POST["address"];
-$addressName = $_POST["addressName"];
 
-$sql = "SELECT * FROM address WHERE address_name = '$addressName' OR address = '$address'";
+$sql = "SELECT * FROM address WHERE address = '$address'";
 
 $result = $conn->query($sql);
 if ($result) {
@@ -50,13 +41,13 @@ if ($result) {
         print json_encode([
             "success" => true,
             "exists" => true,
+            "message" => "Address already exists",
         ]);
     } else {
         print json_encode([
             "success" => true,
             "exists" => false,
             "address" => $address,
-            "addressName" => $addressName,
         ]);
     }
    

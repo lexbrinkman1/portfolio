@@ -45,13 +45,6 @@ if(!isset($_POST["destination"]))
     error("Bestemming is niet geldig");
 }
 
-if(!isset($_POST["destinationName"]))
-{
-    error("Bestemming naam is niet geldig");
-} elseif (strlen($_POST["destinationName"]) > 255) {
-    error("Bestemming naam is niet geldig");
-}
-
 if(!isset($_POST["oldTotal"]))
 {
     error("Beginstand kilometers is niet geldig!");
@@ -88,7 +81,6 @@ if(!isset($_POST["travelDate"]))
 $travelType = $_POST["travelType"];
 $origin = $_POST["origin"];
 $destination = $_POST["destination"];
-$destinationName = $_POST["destinationName"];
 $oldTotal = $_POST["oldTotal"];
 $newTotal = $_POST["newTotal"];
 $distance = $_POST["distance"];
@@ -96,14 +88,14 @@ $travelDuration = $_POST["travelDuration"];
 $travelDate = $_POST["travelDate"];
 
 
-$sql = "INSERT INTO travel_overview VALUES (DEFAULT, '$oldTotal', '$newTotal', '$origin', '$destination', '$destinationName', '$distance', '$travelDuration', '$travelType', '$travelDate')";
+$sql = "INSERT INTO travel_overview VALUES (DEFAULT, '$oldTotal', '$newTotal', '$origin', '$destination', '$distance', '$travelDuration', '$travelType', '$travelDate')";
 
 if ($conn->query($sql) === TRUE) {
     print json_encode([
         "success" => true,
         "message" => "Rit succesvol toegevoegd!",
-        "address" => $destination,
-        "addressName" => $destinationName,
+        "originAddress" => $origin,
+        "destinationAddress" => $destination,
     ]);
 } else {
     error("something went wrong");
