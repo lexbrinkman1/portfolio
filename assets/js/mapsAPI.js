@@ -32,8 +32,16 @@ $(function () {
     });
     // calculate distance
     function calculateDistance() {
-      var origin = $("#origin").val();
-      var destination = $("#destination").val();
+      if ($("#origin").val() != "") {
+        var origin = $("#origin").val();
+      } else if ($("#fromAddress").val() != null) {
+        var origin = $("#fromAddress").val();
+      }
+      if ($("#destination").val() != "") {
+        var destination = $("#destination").val();
+      } else if ($("#toAddress").val() != null) {
+        var destination = $("#toAddress").val();
+      }
       var service = new google.maps.DistanceMatrixService();
       service.getDistanceMatrix(
         {
@@ -54,11 +62,11 @@ $(function () {
       if (status != google.maps.DistanceMatrixStatus.OK) {
         $("#result").html(err);
       } else {
-        if (response.originAddresses[0] === "") {
+        if (response.originAddresses[0] === "" && $("#fromAddress").val() == null) {
           $("#resultOrigin").html("Geen vertrekplaats ingevuld");
           return;
         }
-        if (response.destinationAddresses[0] === "") {
+        if (response.destinationAddresses[0] === "" && $("#toAddress").val() == null) {
           $("#resultDestination").html("Geen bestemming ingevuld");
           return;
         } 

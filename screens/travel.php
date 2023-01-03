@@ -61,22 +61,33 @@
       <form id="distance_form">
         <div class="form-group">
           <label>Vertrekplaats: </label>
-          <input
-            class="form-control"
-            id="from_places"
-            placeholder="Vul locatie in"
-          />
+          <div class="flex-row">
+            <input
+              class="form-control"
+              id="from_places"
+              placeholder="Vul locatie in"
+            />
+            <select name="fromAddress" id="fromAddress" class="form-control">
+              <option selected disabled value="">Selecteer een adres..</option>
+            </select>
+          </div>
+          
           <p style="color:red;" id="resultOrigin"></p>
           <input id="origin" name="origin" required="" type="hidden" />
         </div>
 
         <div class="form-group">
           <label>Bestemming: </label>
-          <input
-            class="form-control"
-            id="to_places"
-            placeholder="Vul locatie in"
-          />
+          <div class="flex-row">
+            <input
+              class="form-control"
+              id="to_places"
+              placeholder="Vul locatie in"
+            />
+            <select name="toAddress" id="toAddress" class="form-control">
+              <option selected disabled value="">Selecteer een adres..</option>
+            </select>
+          </div>
           <p style="color:red;" id="resultDestination"></p>
           <input
             id="destination"
@@ -204,12 +215,44 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <script>
+
+$( document ).ready(function() {
+    getAllAddress();
+});
+
+
 $(".inputNumber input[type='number']").keyup(function() {
   let oldTotal = parseFloat($("#oldTotal").val());
   let distance = parseFloat($("#distance").val());
   let newTotal = oldTotal + distance;
   $("#newTotal").html(`${newTotal}`);
 });
+
+function getAllAddress() {
+    fetch ("../backend/get_all_address.php", {
+        method: 'POST',
+
+    })
+        .then((result) => {
+            if (result.status != 200) { throw new Error("Bad Server Response");}
+            return result.text();
+        })
+        .then((response) => {
+            let data = JSON.parse(response);
+            if (data.success) {
+                for (var i = 0; i < data.allAddress.length; i++) {
+                  let address = data.allAddress[i].address;
+                  let id = data.allAddress[i].id;
+                  $('#fromAddress').append(`<option value="${address}">${address}</option>`);
+                  $('#toAddress').append(`<option value="${address}">${address}</option>`);
+                }
+            } else {
+                console.error(data.error);
+                alert("Er ging iets fout");
+            }
+
+        })
+  }
 
 function checkIfAddressExists(address) {
   const form_data = new FormData();
@@ -236,6 +279,7 @@ function checkIfAddressExists(address) {
 }
 
 function createNewAddress(address) {
+
   const form_data = new FormData();
 
   form_data.append('address', address);
@@ -259,6 +303,7 @@ function createNewAddress(address) {
 }
 
 function createNewRide() {
+
   const form_data = new FormData();
 
   form_data.append('distance', $("#distance").val());

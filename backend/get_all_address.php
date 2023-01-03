@@ -24,28 +24,28 @@ if ($conn->connect_error) {
     error("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM travel_overview";
+$sql = "SELECT * FROM address";
 
 $result = mysqli_query($conn,$sql);
 if (mysqli_num_rows($result) < 1) {
     mysqli_close($conn);
     print json_encode([
         "success" => false,
-        "error" => "No travels found!",
+        "error" => "No address found!",
     ]);
     exit();
 }
 
 $data = [];
-$allTravels = [];
+$allAddress = [];
 while($data = mysqli_fetch_assoc($result))
 {
-    $allTravels[] = $data;
+    $allAddress[] = $data;
 }
 
 
 print json_encode([
     "success" => true,
-    "allTravels" => $allTravels,
+    "allAddress" => $allAddress,
 ]);
 exit();
