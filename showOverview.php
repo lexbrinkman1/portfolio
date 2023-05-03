@@ -67,7 +67,7 @@ $files = scandir('./shows/normal_people/');
         </div>
     </div>
 
-    <iframe id="video"  type='video/x-matroska; codecs="theora, vorbis"' controls></iframe>
+    <video id="video"  type='video/mp4' controls></video>
 </body>
 <script>
     let episode = document.getElementById("videoSelector");
