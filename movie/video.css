@@ -1,0 +1,62 @@
+body {
+    font-family: Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+}
+
+select {
+    width: 150px;
+    margin-bottom: 10px;
+    border-radius: 0px;
+}
+
+video {
+    width: 65%;
+}
+
+.video_header {
+    display: flex;
+    width: 65%;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.overview_body {
+    display: flex;
+    flex-direction: row;
+}
+
+.current_episode {
+    display: flex;
+    flex-direction: row;
+}
+
+#selectedVideo {
+    margin-left: 5px;
+}
+
+.btn_go_back {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.a_media_title {
+    cursor: pointer;
+}
+
+i {
+    font-size: .75rem;
+    margin-bottom: 1rem;
+}
